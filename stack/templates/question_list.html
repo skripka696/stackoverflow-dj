@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Questions{% endblock %}
+
+{% block js %}
+    <script>
+        $('.list-group-item').on('click', function (e) {
+            e.preventDefault();
+            $('.list-group-item').removeClass('active');
+            $(this).addClass('active');
+        });
+    </script>
+{% endblock %}
+
+{% block content %}
+    {% for question in questions%}
+    <div class="row">
+        <div class="col-1">
+            <i class="fa fa-caret-up fa-3x" aria-hidden="true"></i>
+            <h3>{{question.vote}}</h3>
+            <i class="fa fa-caret-down fa-3x" aria-hidden="true"></i>
+        </div>
+        <div class="col-11">
+            <div class="list-group">
+                <a href="{% url 'question_detail' question.pk %}" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">{{question.title}}</h5>
+                        <small>{{question.create_date}}</small>
+                    </div>
+                    <small>{{question.user.username}}</small>
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+
+{% endblock %}
