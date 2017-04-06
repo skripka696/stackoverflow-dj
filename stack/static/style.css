@@ -4,5 +4,37 @@
 }
 
 a {
-    color: #83bf6f;
+    color: #0c9d80;
+}
+
+.question-title{
+    margin: 10px 10px 10px 0px;
+}
+
+.question-vote{
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.color-style{
+    color: #777776;
+}
+.color-black{
+    color: #444444;
+}
+
+.count{
+    display: inline-block;
+    text-align: center;
+    margin-top: 25px;
+}
+.count-text{
+    font-size: 12px;
+}
+.data-time{
+    width: 100%;
+}
+.question_list{
+    margin-top: 5px;
+    border-top: 1px solid rgba(0,0,0,0.1);
 }

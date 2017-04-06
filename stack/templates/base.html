@@ -25,11 +25,13 @@
             {% endif %}
         </ul>
     </div>
-    <div class="offset-md-3 col-md-6 offset-md-3">
-        {% block sidebar%}
-        {% endblock %}
-        {% block content %}
-        {% endblock %}
+    <div class="container">
+        <div class="col-md-12">
+            {% block sidebar%}
+            {% endblock %}
+            {% block content %}
+            {% endblock %}
+        </div>
     </div>
     {% block footer %}{% endblock %}
 

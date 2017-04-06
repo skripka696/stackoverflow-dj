@@ -8,6 +8,22 @@
 
 {% block content %}
 
+<div class="row">
+        <div class="col-1">
+            <i class="color-style fa fa-caret-up fa-3x" aria-hidden="true"></i>
+            <h3 class="color-style question-vote">{{question.vote}}</h3>
+            <i class=" color-style fa fa-caret-down fa-3x" aria-hidden="true"></i>
+        </div>
 
+        <div class="col-11">
+            <div class="question-title">
+                {{question.title}}
+                <hr>
+            </div>
+            <div class="question-content">
+                {{question.content}}
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
