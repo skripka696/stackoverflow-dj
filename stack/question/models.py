@@ -38,6 +38,15 @@ class Question(models.Model):
     def __str__(self):
         return '{}, {}'.format(self.user, self.title)
 
+    @property
+    def get_answers(self):
+        answers = Answer.objects.filter(id=id)
+        return answers
+
+    @property
+    def count_answers(self):
+        return self.answers.all().count()
+
 
 class Answer(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL)

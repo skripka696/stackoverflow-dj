@@ -23,7 +23,52 @@
             <div class="question-content">
                 {{question.content}}
             </div>
+            <div class="tag-content">
+                {% for tag in question.tag.all%}
+                    <button type="button" class="btn btn-secondary btn-sm">{{tag}}</button>
+                {% endfor %}
+            </div>
+
+            <div class="comment-content">
+                {% for comment in question.comment.all%}
+                    {% if comment%}
+                        <p class="data-comment">{{comment.description}}</p>
+
+                    {% endif %}
+                {% endfor %}
+                <br>
+                <a class="add_comment" href="#">add a comment</a>
+            </div>
         </div>
     </div>
+    <p class="answer_subheader">{{question.count_answers}} Answers</p>
+
+        {% for answer in question.answers.all%}
+            <div class="row">
+                <div class="col-1">
+                    <i class="color-style fa fa-caret-up fa-3x" aria-hidden="true"></i>
+                    <h3 class="color-style question-vote">{{answer.vote}}</h3>
+                    <i class=" color-style fa fa-caret-down fa-3x" aria-hidden="true"></i>
+                </div>
+                <div class="col-11">
+                    <div class="answer-content">
+                        <p class="answer_title">{{answer.title}}</p>
+                        <p class="answer_text"> {{answer.content}}</p>
+                    </div>
+                    <div class="comment-content">
+                    {% for comment in answer.comment.all%}
+                        {% if comment%}
+                            <p class="data-comment">{{comment.description}}</p>
+
+                        {% endif %}
+                    {% endfor %}
+                    <br>
+                    <a class="add_comment" href="#">add a comment</a>
+                    </div>
+
+                </div>
+            </div>
+        {% endfor %}
+
 
 {% endblock %}

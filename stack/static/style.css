@@ -38,3 +38,35 @@ a {
     margin-top: 5px;
     border-top: 1px solid rgba(0,0,0,0.1);
 }
+.question-title{
+    color: #0c9d80;
+}
+
+.question-content{
+    min-height: 50px;
+    margin-bottom: 20px;
+}
+.comment-content{
+    margin-top: 20px;
+    margin-left: 50px;
+    font-size: 12px;
+    /*border-top: 1px solid rgba(0,0,0,0.1);*/
+}
+.data-comment{
+    min-height: 45px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.add_comment{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.answer_subheader{
+    margin-top: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.answer-content{
+    margin-top: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
